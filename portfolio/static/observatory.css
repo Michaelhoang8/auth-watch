@@ -1,0 +1,153 @@
+/* Quiet editorial workspaces. App-specific layouts remain in identities.css. */
+body[data-app]{color-scheme:light;--bg:#f8f9f7;--paper:#f8f9f7;--surface:#fff;--field:#fff;--ink:#202a29;--muted:#63716e;--line:#dde3df;--blue:#236b5c;--accent:var(--blue);--radius:4px;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6}
+body[data-app=tickets]{--blue:#595b91;--bg:#faf9fc;--paper:var(--bg)}
+body[data-app=inventory]{--blue:#805f2a;--bg:#faf9f5;--paper:var(--bg)}
+body[data-app=experiments]{--blue:#365e9b;--bg:#f7f9fb;--paper:var(--bg)}
+body[data-app=profile]{--blue:#466b54}
+body[data-app=clean]{--blue:#28778a;--bg:#f6fafb}
+body[data-app=sales]{--blue:#795d3c;--bg:#faf8f3}
+body[data-app=logs]{color-scheme:dark;--bg:#141c1a;--paper:var(--bg);--surface:#192320;--field:#141c1a;--ink:#edf4ef;--muted:#acbcb3;--line:#35463e;--blue:#71c6a5}
+body[data-app=headers]{--blue:#3769a2}
+body[data-app=secrets]{--blue:#7e5d67;--bg:#faf8f9}
+body[data-app=train]{--blue:#557b48;--bg:#f8faf5}
+body[data-app=search]{--blue:#936344;--bg:#fbf9f5}
+body[data-app=evaluate]{color-scheme:dark;--bg:#1b1d1b;--surface:#222622;--field:#171a17;--ink:#eff2e9;--muted:#b2b9a9;--line:#41473c;--blue:#c6d598}
+body[data-app=manifest]{--blue:#3a7197;--bg:#f5f8fb}
+body[data-app=pipeline]{--blue:#6d6194;--bg:#faf9fc}
+body[data-app=reliability]{--blue:#307985;--bg:#f5f9f9}
+body[data-app=rest]{color-scheme:dark;--bg:#151919;--surface:#1c2222;--field:#141919;--ink:#edf4f2;--muted:#acbcb8;--line:#354440;--blue:#6bd5bd}
+body[data-app] main{max-width:1440px}
+body[data-app] header{background:var(--bg);color:var(--ink);border:0;border-bottom:1px solid var(--line);min-height:80px;height:auto;padding-top:18px;padding-bottom:18px;gap:20px}
+body[data-app] header>span:not(#breadcrumb){display:none}
+body[data-app] header a:first-child{font:600 19px Arial,sans-serif;letter-spacing:-.5px}
+body[data-app] header .collection-menu{margin-left:auto}
+body[data-app] header .collection-menu summary{border:0;font-size:12px;padding:8px}
+body[data-app] aside{background:var(--surface);color:var(--ink);border-right:1px solid var(--line)}
+body[data-app] aside :is(.brand small,.nav-label,.aside-bottom,.aside-bottom small){color:var(--muted)}
+body[data-app] aside nav button{color:var(--muted)}
+body[data-app] aside nav button.selected{background:var(--bg);color:var(--blue);border-left:2px solid var(--blue);border-radius:0}
+body[data-app] .intro,body[data-app] .heading{position:relative;display:block;min-height:0;background:none;color:var(--ink);border:0;border-radius:0;padding:48px 0 30px;margin:0;text-align:left;overflow:visible}
+body[data-app] .intro h1,body[data-app] .heading h1{font:400 clamp(36px,4.3vw,64px)/1.07 Arial,Helvetica,sans-serif;letter-spacing:-2.5px;text-transform:none;text-shadow:none;margin:12px 0 20px;max-width:100%;overflow-wrap:anywhere}
+body[data-app=sales] .intro h1,body[data-app=search] .intro h1{font-family:Georgia,serif;letter-spacing:-2px}
+body[data-app=logs] .intro h1,body[data-app=evaluate] .intro h1{font-family:Consolas,monospace;font-size:46px}
+body[data-app] .heading h1>span{display:none}
+body[data-app] .intro p:not(.eyebrow),body[data-app] .heading p{color:var(--muted);font:15px/1.7 Arial,sans-serif;max-width:640px;margin:0}
+body[data-app] .eyebrow{font:10px/1.5 Arial,sans-serif;letter-spacing:2px;color:var(--blue)}
+body[data-app] :is(.local,.heading .pill){display:none}
+body[data-app] nav:not(aside nav){display:flex;gap:24px;border:0;border-bottom:1px solid var(--line);width:auto;margin:0 0 28px;padding:0}
+body[data-app] nav button[data-mode]{background:none;border:0;border-bottom:2px solid transparent;border-radius:0;color:var(--muted);padding:12px 0;font:13px Arial,sans-serif}
+body[data-app] nav button[data-mode][aria-pressed=true]{background:none;color:var(--ink);border-color:var(--blue)}
+body[data-app] nav button[data-mode] :is(small,b){display:none}
+body[data-app] :is(.source,.results,.panel){background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:4px;box-shadow:none;padding:26px}
+body[data-app] .workspace{gap:26px;border:0}
+body[data-app] .source{border:1px solid var(--line)}
+body[data-app] .results{min-height:0}
+/* Keep result colors inherited from the page rather than earlier dark inspectors. */
+body[data-app] .results{--ink:unset;--muted:unset;--line:unset;--bg:unset}
+body[data-app] .results{color:inherit;border-color:color-mix(in srgb,currentColor 16%,transparent)}
+body[data-app] .results :is(.hint,.help,.empty p,.empty small,.response-caption){color:inherit;opacity:.72}
+body[data-app] :is(.source,.results,.panel) h2{font:600 15px/1.5 Arial,sans-serif;letter-spacing:0}
+body[data-app] :is(input,select,textarea){background:var(--field);color:inherit;border:1px solid var(--line);border-radius:3px;box-shadow:none}
+body[data-app] textarea{line-height:1.7}
+body[data-app] button{box-shadow:none;transition:background-color .15s ease,color .15s ease;transform:none}
+body[data-app] button:hover{transform:none;box-shadow:none}
+body[data-app] .primary{background:var(--blue);border:1px solid var(--blue);color:#fff;border-radius:4px;font:600 13px/1.5 Arial,sans-serif;padding:12px 20px;box-shadow:none}
+body[data-app=logs] .primary,body[data-app=evaluate] .primary,body[data-app=rest] .primary{color:#14241e}
+body[data-app] :is(.text-button,#notice,.stat strong){color:var(--blue)!important}
+body[data-app] #notice.error{color:#a92c35!important}
+body[data-app] .empty{min-height:220px;padding:32px 22px;gap:8px}
+body[data-app] .empty>span,body[data-app] .empty small{display:none}
+body[data-app] .empty h3{font:400 22px/1.4 Arial,sans-serif;color:inherit}
+body[data-app] .empty p{font-size:13px}
+body[data-app] .stat{background:transparent;border:0;border-left:1px solid var(--line);border-radius:0;padding:12px 20px;box-shadow:none}
+body[data-app] .stat:first-child{border-left:0}
+body[data-app] .stat strong{font:400 30px/1.2 Arial,sans-serif;letter-spacing:-1px}
+body[data-app] .stat small{letter-spacing:0}
+body[data-app] .column{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:14px 0}
+body[data-app] .card{background:var(--surface);border:1px solid var(--line);border-radius:4px;box-shadow:none;transform:none}
+body[data-app] :is(.finding,.result-card){background:transparent;border-radius:0;box-shadow:none}
+body[data-app] th{background:transparent;color:inherit;border-bottom:1px solid var(--line)}
+body[data-app] tbody tr:nth-child(even){background:transparent}
+body[data-app] .result-bottom strong{color:var(--blue);font:400 30px Arial,sans-serif}
+body[data-app] #experiment-results .panel{border-top:1px solid var(--line)}
+body[data-app] pre{background:var(--field);color:inherit;border:1px solid var(--line);border-radius:3px}
+body[data-app] .intro:before,body[data-app] .intro:after{display:none}
+.observatory-controls{position:relative;font:12px Arial,sans-serif;flex-shrink:0;z-index:25;margin-left:0}
+.observatory-controls summary{cursor:pointer;padding:8px;list-style-position:inside;color:inherit}
+.observatory-controls>div{position:absolute;right:0;top:calc(100% + 12px);display:flex;gap:8px;padding:16px;width:260px;background:var(--surface);border:1px solid var(--line);border-radius:6px;box-shadow:0 10px 30px #0001}
+body[data-app] .observatory-controls button{font:12px Arial,sans-serif;padding:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);flex:1}
+body[data-app] .observatory-controls button[aria-pressed=true]{border-color:var(--blue)}
+body[data-app] #capability-options{padding:0;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:20px 0}
+body[data-app] details.extension-report{padding:0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;margin-top:28px}
+body[data-app] :is(#capability-options,details.extension-report)>summary{padding:16px 0;cursor:pointer;font:500 13px/1.5 Arial,sans-serif;color:inherit;list-style-position:inside}
+.disclosure-body{padding:8px 0 4px}
+body[data-app] details.extension-report>.extension-form{padding-top:16px}
+body[data-app] #notice{font-size:12px}
+body[data-app] footer{border-top:1px solid var(--line);margin-top:40px;padding:24px 0}
+body.still-life *,body.still-life *:before,body.still-life *:after{animation:none!important;transition:none!important}
+body.observatory-paused *{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+@media(max-width:900px){body[data-app] .workspace{gap:20px}body[data-app] .source{padding:22px}}
+@media(max-width:760px){
+ body[data-app] header{padding:16px 18px;gap:10px;min-height:65px}
+ body[data-app] main>header{padding-left:0;padding-right:0}
+ body[data-app] aside{border-right:0;border-bottom:1px solid var(--line)}
+ body[data-app] .intro,body[data-app] .heading{padding:32px 0 24px;margin:0;min-height:0}
+ body[data-app] .intro h1,body[data-app] .heading h1{font-size:36px;letter-spacing:-1.5px;line-height:1.12}
+ body[data-app] .intro p:not(.eyebrow),body[data-app] .heading p{font-size:14px}
+ body[data-app] nav:not(aside nav){gap:16px;flex-wrap:wrap}
+ body[data-app] nav button[data-mode]{font-size:12px;min-height:44px}
+ body[data-app] :is(.source,.results,.panel){padding:20px}
+ body[data-app] .stat{padding:10px}
+ body[data-app] .stat strong{font-size:24px}
+ body[data-app] .observatory-controls summary{font-size:11px;padding:8px 0}
+ .observatory-controls>div{width:240px}
+}
+
+body[data-app] .secondary-options{border:0;border-top:1px solid var(--line);padding:0;margin:16px 0}
+body[data-app] .secondary-options>summary{padding:14px 0;cursor:pointer;font:500 13px/1.5 Arial,sans-serif;list-style-position:inside}
+
+@media(max-width:760px){body[data-app] header{position:relative;z-index:30}.observatory-controls{position:static}.observatory-controls>div{left:0;right:0;top:100%;width:auto;max-width:none;margin:0 18px}}
+
+/* Short, content-led motion: no looping decoration or hidden content dependency. */
+body[data-app] .quiet-arrival .eyebrow{animation:quiet-in .55s ease-out both}
+body[data-app] .quiet-arrival h1{animation:quiet-in .65s cubic-bezier(.2,.7,.3,1) .04s both}
+body[data-app] .quiet-arrival p:not(.eyebrow){animation:quiet-in .65s cubic-bezier(.2,.7,.3,1) .09s both}
+body[data-app] .quiet-reveal{animation:quiet-in .6s cubic-bezier(.2,.7,.3,1) both}
+body[data-app] .signal-complete{animation:result-settle .5s ease-out both}
+body[data-app] details[open]>:not(summary){animation:disclosure-in .24s ease-out both}
+body[data-app] button{transition:background-color .2s ease,color .2s ease,border-color .2s ease,translate .2s ease}
+body[data-app] nav button[data-mode]{transition:color .2s ease,border-color .25s ease}
+body[data-app] :is(input,textarea,select){transition:border-color .2s ease,box-shadow .2s ease}
+body[data-app] :is(input,textarea,select):focus{border-color:var(--blue);box-shadow:0 0 0 2px color-mix(in srgb,var(--blue) 10%,transparent)}
+body[data-app] summary{transition:color .2s ease}
+body[data-app] summary:hover{color:var(--blue)}
+@media(hover:hover){body[data-app]:not(.still-life) button:not(:disabled):hover{translate:0 -1px}}
+body[data-app]:not(.still-life) button:not(:disabled):active{translate:0 0}
+@keyframes quiet-in{from{opacity:.25;translate:0 10px}to{opacity:1;translate:0 0}}
+@keyframes disclosure-in{from{opacity:.35;translate:0 4px}to{opacity:1;translate:0 0}}
+@keyframes result-settle{from{opacity:.65;translate:0 4px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:reduce){body[data-app] button{translate:none!important}}
+
+.response-pagination{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.response-pagination[hidden]{display:none}
+.response-pagination span{font-size:12px;color:var(--muted)}
+.response-pagination button{padding:9px 12px;white-space:nowrap}
+@media(max-width:760px){.response-pagination{flex-wrap:wrap}.response-pagination span{order:-1;flex-basis:100%}}
+
+body[data-app] #cancel-analysis{margin:8px 0;padding:10px 14px;border:1px solid var(--line);background:transparent;color:var(--ink)}
+body[data-app=clean] #cancel-analysis{grid-column:2}
+
+.issue-view-options{margin:0 0 16px;font-size:13px}
+.issue-view-options>.two-col{margin-top:16px;max-width:620px}
+
+.conflict-review{margin:16px 0;padding-top:12px;border-top:1px solid var(--line)}
+.conflict-values dt{font-size:11px;color:var(--muted);margin-top:12px}
+.conflict-values dd{margin:3px 0 12px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}
+
+/* Keep workspace export actions aligned with each app palette. */
+body[data-app] .panel .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+body[data-app] .panel .section-head a{color:var(--blue);font-size:12px;text-underline-offset:3px}
+
+body[data-app] button.report-export{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:3px;padding:9px 13px;font:600 12px/1.5 Arial,sans-serif}
+body[data-app] button.report-export:hover:not(:disabled){background:var(--bg);border-color:var(--blue)}

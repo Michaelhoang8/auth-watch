@@ -1,0 +1,6 @@
+{
+  "path": "/api/security/logs",
+  "body": {
+    "text": "{\"timestamp\": \"2026-01-01T00:00:00Z\", \"ip\": \"192.0.2.1\", \"user\": \"demo\", \"status\": \"failure\"}\n{\"timestamp\": \"2026-01-01T00:01:00Z\", \"ip\": \"192.0.2.1\", \"user\": \"demo\", \"status\": \"failure\"}\n{\"timestamp\": \"2026-01-01T00:02:00Z\", \"ip\": \"192.0.2.1\", \"user\": \"demo\", \"status\": \"failure\"}\n{\"timestamp\": \"2026-01-01T00:03:00Z\", \"ip\": \"192.0.2.1\", \"user\": \"demo\", \"status\": \"failure\"}\n{\"timestamp\": \"2026-01-01T00:04:00Z\", \"ip\": \"192.0.2.1\", \"user\": \"demo\", \"status\": \"failure\"}\n{\"timestamp\": \"2026-01-01T00:05:00Z\", \"ip\": \"192.0.2.1\", \"user\": \"demo\", \"status\": \"failure\"}"
+  }
+}

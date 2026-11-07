@@ -1,0 +1,1 @@
+"""Auth Watch: standalone application."""

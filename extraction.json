@@ -1,0 +1,31 @@
+{
+  "app": "auth-watch",
+  "mode": "logs",
+  "source": "Michaelhoang8/portfolio-lab",
+  "backend_definitions": {
+    "capabilities": [
+      "enrich",
+      "table"
+    ],
+    "security_apps": [
+      "auth_logs",
+      "source"
+    ],
+    "json_input": [
+      "decode",
+      "read_exact"
+    ],
+    "validation": [
+      "ConflictError",
+      "NotFoundError",
+      "ValidationError",
+      "integer"
+    ],
+    "db": [
+      "SCHEMA",
+      "connect",
+      "initialize",
+      "rows"
+    ]
+  }
+}
