@@ -151,3 +151,33 @@ body[data-app] .panel .section-head a{color:var(--blue);font-size:12px;text-unde
 
 body[data-app] button.report-export{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:3px;padding:9px 13px;font:600 12px/1.5 Arial,sans-serif}
 body[data-app] button.report-export:hover:not(:disabled){background:var(--bg);border-color:var(--blue)}
+
+/* Authentication incident review */
+body[data-app=logs] { --bg:#111c21; --surface:#16242b; --field:#102027; --ink:#d4e4e7; --muted:#94aeb5; --line:#2c424a; --blue:#8bc4b6; }
+body[data-app=logs] main { max-width:1540px; padding:28px 3% 0; }
+body[data-app=logs] .workspace { grid-template-columns:310px minmax(0,1fr); gap:30px; }
+body[data-app=logs] .source { background:transparent; border:0; padding:0; }
+body[data-app=logs] .results { border:0; padding:24px 28px; }
+body[data-app=logs] #source { height:300px; font-size:11px; color:#acc7ce; }
+body[data-app=logs] #log-options { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+body[data-app=logs] #log-options legend { font-size:11px; }
+body[data-app=logs] .stats { margin-top:22px; }
+body[data-app=logs] .summary { background:#1b3038; color:#9db9c1; border-left:2px solid #5a8390; }
+body[data-app=logs] .finding { padding:14px 18px; background:#192b31; border:1px solid #334b53; border-left:3px solid #76a894; margin:9px 0; }
+body[data-app=logs] .finding.high { border-left-color:#d5a173; }
+body[data-app=logs] .finding>summary { cursor:pointer; list-style-position:outside; margin-left:12px; }
+body[data-app=logs] .finding>summary h3 { display:inline-flex; width:calc(100% - 15px); margin:0; font-size:13px; }
+body[data-app=logs] .finding>p { color:#b1c6cb; }
+body[data-app=logs] .finding .meta { color:#8ca9b0; }
+.alert-activity { border-block:1px solid #314951; padding:14px 0 10px; margin:24px 0; }
+.alert-activity h3 { font-size:13px; display:flex; justify-content:space-between; }
+.alert-activity h3 small { font-weight:400; color:#86a4ad; font-size:10px; }
+.alert-activity svg { display:block; width:100%; }
+.alert-activity line { stroke:#3c5962; }
+.activity-high { fill:#d4a06d; }
+.activity-other { fill:#78ab99; }
+.alert-activity text { font:9px ui-monospace,monospace; fill:#8ba7b0; }
+.alert-activity p { font-size:10px; color:#8ba7b0; }
+body[data-app=logs]:not(.still-life) .alert-activity { animation:activity-arrival .45s ease-out; }
+@keyframes activity-arrival { from { opacity:.3; transform:translateY(4px); } to { opacity:1; transform:none; } }
+@media(max-width:850px) { body[data-app=logs] .workspace { grid-template-columns:1fr; } body[data-app=logs] .results { padding:20px; } }

@@ -1,6 +1,78 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Auth Watch</title><link rel="stylesheet" href="/data.css"><link rel="stylesheet" href="/security.css"><link rel="stylesheet" href="/identities.css"><link rel="stylesheet" href="/observatory.css"><script src="/observatory.js" defer></script><script src="/identities.js" defer></script><script src="/capabilities.js" defer></script><script src="/text_file.js" defer></script><script src="/security.js" defer></script></head>
-<body data-app="logs"><header><a href="/">Auth Watch</a><span>LOCAL WORKSPACE</span><a href="https://github.com/Michaelhoang8/auth-watch">Source code ↗</a></header><main><div class="intro"><div><p class="eyebrow">THE SECURITY WORKSPACE</p><h1>Find the signal.<br>Understand the risk<span>.</span></h1><p>Three focused tools for detection, review, and triage.</p></div><div class="local">● OFFLINE ANALYSIS<small>Inputs stay on your machine.<br>No targets scanned. No credentials tested.</small></div></div>
-
-<div class="workspace"><section class="source"><div class="section-head"><h2 id="input-title">Authentication events</h2><button id="sample" class="text-button">Load sample</button></div><p id="input-help" class="hint"></p><label class="upload"><span id="file-label">Choose a UTF-8 file</span><input id="file" type="file"></label><label for="source">Paste input · up to 500 KB / 5,000 lines</label><textarea id="source" spellcheck="false" autocomplete="off"></textarea><fieldset id="log-options"><legend>Detection window</legend><label>Failure threshold<input id="threshold" type="number" min="2" max="100" value="5"></label><label>Window in minutes<input id="window" type="number" min="1" max="60" value="10"></label></fieldset><button id="run" class="primary">Analyze events →</button><button id="clear" class="clear">Clear input and results</button><div id="notice" role="status" aria-live="polite"></div><p class="hint">Input is processed in memory by the local server. Reports contain findings only. Secret input is cleared after a successful scan.</p></section>
-<section class="results" aria-label="Security results"><div class="section-head"><h2 id="result-title">Detection report</h2><button id="download" disabled>Download JSON</button></div><div id="result"></div></section></div><footer>Auth Watch<span>Independent application · local processing</span></footer></main></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Auth Watch</title>
+    <link rel="stylesheet" href="/data.css" />
+    <link rel="stylesheet" href="/security.css" />
+    <link rel="stylesheet" href="/identities.css" />
+    <link rel="stylesheet" href="/observatory.css" />
+    <script src="/observatory.js" defer></script>
+    <script src="/identities.js" defer></script>
+    <script src="/capabilities.js" defer></script>
+    <script src="/text_file.js" defer></script>
+    <script src="/security.js" defer></script>
+  </head>
+  <body data-app="logs">
+    <header>
+      <a href="/">Auth Watch</a><span>LOCAL WORKSPACE</span
+      ><a href="https://github.com/Michaelhoang8/auth-watch">Source code ↗</a>
+    </header>
+    <main>
+      <div class="workspace">
+        <section class="source">
+          <div class="section-head">
+            <h2 id="input-title">Authentication events</h2>
+            <button id="sample" class="text-button">Load sample</button>
+          </div>
+          <p id="input-help" class="hint"></p>
+          <label class="upload"
+            ><span id="file-label">Choose a UTF-8 file</span
+            ><input id="file" type="file" /></label
+          ><label for="source">Paste input · up to 500 KB / 5,000 lines</label
+          ><textarea
+            id="source"
+            spellcheck="false"
+            autocomplete="off"
+          ></textarea>
+          <fieldset id="log-options">
+            <legend>Detection window</legend>
+            <label
+              >Failure threshold<input
+                id="threshold"
+                type="number"
+                min="2"
+                max="100"
+                value="5" /></label
+            ><label
+              >Window in minutes<input
+                id="window"
+                type="number"
+                min="1"
+                max="60"
+                value="10"
+            /></label>
+          </fieldset>
+          <button id="run" class="primary">Analyze events →</button
+          ><button id="clear" class="clear">Clear input and results</button>
+          <div id="notice" role="status" aria-live="polite"></div>
+          <p class="hint">
+            Events are processed in memory by the local server. Reports retain
+            alert evidence and source-level summaries.
+          </p>
+        </section>
+        <section class="results" aria-label="Security results">
+          <div class="section-head">
+            <h2 id="result-title">Detection report</h2>
+            <button id="download" disabled>Download JSON</button>
+          </div>
+          <div id="result"></div>
+        </section>
+      </div>
+      <footer>
+        Auth Watch<span>Independent application · local processing</span>
+      </footer>
+    </main>
+  </body>
+</html>

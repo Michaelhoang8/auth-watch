@@ -4,6 +4,8 @@ Correlate authentication events and inspect bounded source evidence for suspicio
 
 ![Auth Watch preview](docs/app.png)
 
+The incident console summarizes alert triggers in 32 equal-duration time bins and separates high-priority triggers by color. This chart is not authentication-event volume. Alerts expand to reveal their evidence, with the first alert initially open. Reduced-motion and the local motion setting suppress chart transitions.
+
 ## Run
 
 Requires Python 3.11+; no third-party runtime dependencies. Clone this repository and run from its root:

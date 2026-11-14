@@ -80,7 +80,7 @@ window.analysisEmpty = function (mode) {
     profile: ['Understand every column', 'Inspect missing values, types, and distributions before using a dataset.'],
     clean: ['Build a cleaner dataset', 'Choose your cleaning steps, then compare input and output row counts.'],
     sales: ['See where revenue comes from', 'Map your date, category, and amount columns to build a revenue report.'],
-    logs: ['Turn events into investigation leads', 'Load authentication events to inspect failure bursts and suspicious sequences.'],
+    logs: ['No detection report', 'Load authentication events to inspect failure bursts and suspicious sequences.'],
     headers: ['Review your response policies', 'Paste an HTTP header block to see observed controls and practical next steps.'],
     secrets: ['Review text without exposing findings', 'Scan source text for credential patterns. Reports omit raw credential values.'],
     train: ['Train your first baseline', 'Load labeled numeric data to compare a classifier with a majority-class baseline.'],
